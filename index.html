@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./images/ct.css">
+    <link type="text/css" href="./images/pace-theme-minimal.css" rel="stylesheet">
+    <style type="text/css">
+        #container {
+            z-index: 20 !important;
+        }
+
+        .main-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            background: url(img/main-bg.jpg) center center no-repeat;
+            background-size: cover;
+        }
+
+        .main {
+            width: 828px;
+            height: 356px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            margin-left: -414px;
+            margin-top: -268px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            z-index: -2;
+        }
+
+        .url-t {
+            margin-top: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 0px;
+            transition: all .2s linear;
+            -webkit-transition: all .2s linear;
+            -moz-transition: all .2s linear;
+            -o-transition: all .2s linear;
+        }
+
+        .btn:hover {
+            margin-top: -4px;
+        }
+
+        #canvas,
+        #stats {
+            opacity: 0.6;
+        }
+
+        @media screen and (max-width: 640px) {
+            * {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            a {
+                width: 90%;
+            }
+        }
+
+
+
+        body,
+        html {
+            height: 100%;
+            background: #18100e;
+        }
+
+        @media (max-width: 800px) {
+            .main-bg {
+                height: 100%;
+                background: url(img/main-bg.jpg) center center no-repeat;
+            }
+        }
+    </style>
+</head>
+
+<body class="pace-done" style="font-family: microsoft yahei;">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99"
+            style="transform: translate3d(100%, 0px, 0px);">
+        </div>
+    </div>
+    <div class="pace-progress-inner"></div>
+    <div class="pace-activity"></div>
+    <div class="main-bg"></div>
+    <div id="container">
+        <div style="display: table-cell;">
+            <h1 id="h1" class="transition-in"></h1>
+            <h2 id="h2" class="transition-in" style="font-family: microsoft yahei"></h2>
+            <div class="main">
+                <img src="./images/tp-txt.png" class="tp-txt">
+                <img onclick="enter()" class="btn" style="margin-top:20px" src="./images/btn.png">
+            </div>
+        </div>
+    </div>
+    <div style="position:relative;height:100%;width: 100%;width: 100%;">
+        <div
+            style="position: absolute;bottom: 0px;background-color:rgba(5,5,5,0.7);height: 130px;width: 100%;padding-top:5px;z-index: 12;">
+            <img src="./images/f_logo.png">
+        </div>
+    </div>
+    <canvas id="canvas" width="388" height="937"></canvas>
+    <script>
+        function enter() {
+            var link = Math.random() >= 0.5 ? "https://014600.cc" : "https://015700.cc";
+            if (window.location.origin === "https://01460.cc") link = "https://014600.cc"
+            if (window.location.origin === "https://01570.cc") link = "https://015700.cc"
+            window.open(link, "_blank");
+        }
+    </script>
+    <script src="./images/ct1.js"></script>
+    <script src="./images/ct2.js"></script>
+</body>
+
+</html>
